@@ -1,0 +1,47 @@
+{
+  "factor": "v7 因子 5",
+  "expression": "seed_ts_std_daily(masked_daily_mean_signal(forward_window_std(close_minute_log_return(close, horizon=5), ddof=1, window=5), topk_separated_events(volume, exclude_before=15, k=10, min_gap=5)), window=60)",
+  "params": {
+    "horizon": 5,
+    "response_window": 5,
+    "top_k": 10,
+    "exclude_before": 15,
+    "min_gap": 5,
+    "ts_std": 60
+  },
+  "universe": "中证 500 成分股（PIT）",
+  "windows": {
+    "select": {
+      "instruments": 892,
+      "dates": 1215,
+      "first": "2018-01-02",
+      "last": "2022-12-30",
+      "signal_live_cells": 556325
+    },
+    "valid": {
+      "instruments": 733,
+      "dates": 484,
+      "first": "2023-01-03",
+      "last": "2024-12-31",
+      "signal_live_cells": 234131
+    },
+    "test": {
+      "instruments": 640,
+      "dates": 382,
+      "first": "2025-01-02",
+      "last": "2026-07-31",
+      "signal_live_cells": 184313
+    }
+  },
+  "generated_by": "compute_f5.py",
+  "warmup_trading_days_requested": 80,
+  "warning": "样本期起点 2018-01-02 即数据边界，实际预热 0 日；60 日 ts_std 与 60 日波动率在该段开头若干周使用不满窗口（严格后向，非前视）。",
+  "content": "最终信号，即实际参与截面排序的序列",
+  "pipeline": "raw -> 成分股过滤 -> MAD5 -> 60 日波动率残差 -> 10 日均值 -> MAD5 -> x(-1)",
+  "vol_window": 60,
+  "smooth_days": 10,
+  "direction": -1,
+  "column": "factor",
+  "rows": 1683032,
+  "ok_cells": 974769
+}

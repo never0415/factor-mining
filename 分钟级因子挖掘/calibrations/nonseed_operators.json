@@ -1,0 +1,765 @@
+{
+  "schema_version": 1,
+  "environment": {
+    "created_at_unix": 1787223055.1820014,
+    "platform": "Windows-10-10.0.19045-SP0",
+    "python": "3.12.13",
+    "torch": "2.5.1+cu124",
+    "torch_cuda": "12.4",
+    "device": "cuda:0",
+    "device_name": "NVIDIA GeForce GTX 1070",
+    "compute_capability": [
+      6,
+      1
+    ],
+    "dtype": "float32"
+  },
+  "operators": {
+    "amount_spread": {
+      "status": "ok",
+      "spec_fingerprint": "29f9b1bc9d30b4c3bd390be430937ce54ddd11a059629ed2ac55f4c167dc3a13",
+      "reference_shape": {
+        "I": 150,
+        "D": 120,
+        "M": 240
+      },
+      "seconds": 8.559995330870152e-05,
+      "peak_bytes": 72192,
+      "device": "NVIDIA GeForce GTX 1070",
+      "source": "nonseed_operator_batch_benchmark",
+      "profiles_tested": 1,
+      "slowest_parameters": {}
+    },
+    "band_power_ratio": {
+      "status": "ok",
+      "spec_fingerprint": "3c213f4a989ef411c104c9fb034805fc77442a4ecf38a4e9ad0431f5d58c1a37",
+      "reference_shape": {
+        "I": 150,
+        "D": 120,
+        "M": 240
+      },
+      "seconds": 0.0009726000134833157,
+      "peak_bytes": 8858112,
+      "device": "NVIDIA GeForce GTX 1070",
+      "source": "nonseed_operator_batch_benchmark",
+      "profiles_tested": 11,
+      "slowest_parameters": {
+        "period_low": 2.0,
+        "period_high": 3.0
+      }
+    },
+    "blend_three_factors": {
+      "status": "ok",
+      "spec_fingerprint": "36edd32b2e5540771583d48ff0087e3d3b27d299e1f002351934cbf16b7aa41e",
+      "reference_shape": {
+        "I": 150,
+        "D": 120,
+        "M": 240
+      },
+      "seconds": 7.970002479851246e-05,
+      "peak_bytes": 144384,
+      "device": "NVIDIA GeForce GTX 1070",
+      "source": "nonseed_operator_batch_benchmark",
+      "profiles_tested": 1,
+      "slowest_parameters": {}
+    },
+    "boxcox_grid_mle": {
+      "status": "ok",
+      "spec_fingerprint": "7e0be0cdcd00cd709647dc4a960a0497074eb0fbaa31da72a1b011c972b4d36a",
+      "reference_shape": {
+        "I": 150,
+        "D": 120,
+        "M": 240
+      },
+      "seconds": 0.012565300043206662,
+      "peak_bytes": 247034368,
+      "device": "NVIDIA GeForce GTX 1070",
+      "source": "nonseed_operator_batch_benchmark",
+      "profiles_tested": 1,
+      "slowest_parameters": {}
+    },
+    "cap_scale": {
+      "status": "ok",
+      "spec_fingerprint": "5be82c9fe529bb2cb12965431e9bd897718df93c36078d033ee9641c0c8f8586",
+      "reference_shape": {
+        "I": 150,
+        "D": 120,
+        "M": 240
+      },
+      "seconds": 6.829999620094895e-05,
+      "peak_bytes": 144384,
+      "device": "NVIDIA GeForce GTX 1070",
+      "source": "nonseed_operator_batch_benchmark",
+      "profiles_tested": 1,
+      "slowest_parameters": {}
+    },
+    "close_amplitude": {
+      "status": "ok",
+      "spec_fingerprint": "a966c533e762443e6a271a5a11a154b73d5d0bebdc2f5618e1eee2020e89b3d7",
+      "reference_shape": {
+        "I": 150,
+        "D": 120,
+        "M": 240
+      },
+      "seconds": 0.0007804000051692128,
+      "peak_bytes": 51840000,
+      "device": "NVIDIA GeForce GTX 1070",
+      "source": "nonseed_operator_batch_benchmark",
+      "profiles_tested": 1,
+      "slowest_parameters": {}
+    },
+    "cross_section_distance": {
+      "status": "ok",
+      "spec_fingerprint": "bc13633a18521b1da774cb9a2b0ba7001fe6df8ca03229773ab2524b04f59d63",
+      "reference_shape": {
+        "I": 150,
+        "D": 120,
+        "M": 240
+      },
+      "seconds": 0.00042320002103224397,
+      "peak_bytes": 454144,
+      "device": "NVIDIA GeForce GTX 1070",
+      "source": "nonseed_operator_batch_benchmark",
+      "profiles_tested": 2,
+      "slowest_parameters": {
+        "standardize": true
+      }
+    },
+    "daily_open_close_return": {
+      "status": "ok",
+      "spec_fingerprint": "cffd1e2ca4bf02c09809d2dc9307018809b9b7f0fd4b9b5863fe8fc2e2c2a114",
+      "reference_shape": {
+        "I": 150,
+        "D": 120,
+        "M": 240
+      },
+      "seconds": 0.001960399968083948,
+      "peak_bytes": 30312960,
+      "device": "NVIDIA GeForce GTX 1070",
+      "source": "nonseed_operator_batch_benchmark",
+      "profiles_tested": 1,
+      "slowest_parameters": {}
+    },
+    "delta_sigma_event": {
+      "status": "ok",
+      "spec_fingerprint": "3c6f56bf4ccb571fb589f8dd7e5cdf64abca8102e17a87e5f197f9bac4de73d2",
+      "reference_shape": {
+        "I": 150,
+        "D": 120,
+        "M": 240
+      },
+      "seconds": 0.004857800027821213,
+      "peak_bytes": 90487296,
+      "device": "NVIDIA GeForce GTX 1070",
+      "source": "nonseed_operator_batch_benchmark",
+      "profiles_tested": 192,
+      "slowest_parameters": {
+        "transform": "log1p",
+        "sigma": 1.0,
+        "direction": "below",
+        "exclude_edges": 10,
+        "ddof": 0
+      }
+    },
+    "detrend": {
+      "status": "ok",
+      "spec_fingerprint": "d225d78820ae81357b8482df4307d4ca182fd8cb6875b3f298a37119122f0be6",
+      "reference_shape": {
+        "I": 150,
+        "D": 120,
+        "M": 240
+      },
+      "seconds": 0.0011317000025883317,
+      "peak_bytes": 51985920,
+      "device": "NVIDIA GeForce GTX 1070",
+      "source": "nonseed_operator_batch_benchmark",
+      "profiles_tested": 2,
+      "slowest_parameters": {
+        "method": "linear"
+      }
+    },
+    "fft_power": {
+      "status": "ok",
+      "spec_fingerprint": "4dcaa3656c816886d644f4104766c1a65ddff3e87d437cf96295b26cf498b171",
+      "reference_shape": {
+        "I": 150,
+        "D": 120,
+        "M": 240
+      },
+      "seconds": 0.0009091999963857234,
+      "peak_bytes": 43560960,
+      "device": "NVIDIA GeForce GTX 1070",
+      "source": "nonseed_operator_batch_benchmark",
+      "profiles_tested": 1,
+      "slowest_parameters": {}
+    },
+    "follow_ratio_series": {
+      "status": "ok",
+      "spec_fingerprint": "ea2926df941b01aae2cdb6e57c7436c66b966a360b5ba65c65fd892b20cdbf50",
+      "reference_shape": {
+        "I": 150,
+        "D": 120,
+        "M": 240
+      },
+      "seconds": 0.012315400002989918,
+      "peak_bytes": 307155968,
+      "device": "NVIDIA GeForce GTX 1070",
+      "source": "nonseed_operator_batch_benchmark",
+      "profiles_tested": 3,
+      "slowest_parameters": {
+        "window": 10
+      }
+    },
+    "forward_window_std": {
+      "status": "ok",
+      "spec_fingerprint": "10b7378e402ed7964b2c870dde8e0f805f80f1ec68a2e87cec045fe630f93e24",
+      "reference_shape": {
+        "I": 150,
+        "D": 120,
+        "M": 240
+      },
+      "seconds": 0.02326879999600351,
+      "peak_bytes": 641787904,
+      "device": "NVIDIA GeForce GTX 1070",
+      "source": "nonseed_operator_batch_benchmark",
+      "profiles_tested": 6,
+      "slowest_parameters": {
+        "window": 10,
+        "ddof": 1
+      }
+    },
+    "intraday_sigma_event": {
+      "status": "ok",
+      "spec_fingerprint": "23360687f69d6bb23dc85a23a2a461bf674e060d27cc779cf553d54aca7b7710",
+      "reference_shape": {
+        "I": 150,
+        "D": 120,
+        "M": 240
+      },
+      "seconds": 0.0025325000169686973,
+      "peak_bytes": 56521216,
+      "device": "NVIDIA GeForce GTX 1070",
+      "source": "nonseed_operator_batch_benchmark",
+      "profiles_tested": 64,
+      "slowest_parameters": {
+        "sigma": 1.0,
+        "direction": "above",
+        "exclude_edges": 15,
+        "ddof": 0
+      }
+    },
+    "inverse_event": {
+      "status": "ok",
+      "spec_fingerprint": "3e6e8f03c70930e63c63168751c88aced38fd69b69ff00c2342f0f0fb94e80d0",
+      "reference_shape": {
+        "I": 150,
+        "D": 120,
+        "M": 240
+      },
+      "seconds": 9.470002260059118e-05,
+      "peak_bytes": 4320256,
+      "device": "NVIDIA GeForce GTX 1070",
+      "source": "nonseed_operator_batch_benchmark",
+      "profiles_tested": 1,
+      "slowest_parameters": {}
+    },
+    "iqr_clip": {
+      "status": "ok",
+      "spec_fingerprint": "775eb54e67d85559e016e1dd3c10fc601eb56fc656b975887c97c524af0d3148",
+      "reference_shape": {
+        "I": 150,
+        "D": 120,
+        "M": 240
+      },
+      "seconds": 0.016632799990475178,
+      "peak_bytes": 73747456,
+      "device": "NVIDIA GeForce GTX 1070",
+      "source": "nonseed_operator_batch_benchmark",
+      "profiles_tested": 16,
+      "slowest_parameters": {
+        "k": 1.5,
+        "min_valid_ratio": 0.95
+      }
+    },
+    "liquidity_elasticity": {
+      "status": "ok",
+      "spec_fingerprint": "19f29c83353bf5e1a18d0ab4d7ce072085ce0ff5e3c9a204094ab46796251f4c",
+      "reference_shape": {
+        "I": 150,
+        "D": 120,
+        "M": 240
+      },
+      "seconds": 0.00011419999646022916,
+      "peak_bytes": 144384,
+      "device": "NVIDIA GeForce GTX 1070",
+      "source": "nonseed_operator_batch_benchmark",
+      "profiles_tested": 1,
+      "slowest_parameters": {}
+    },
+    "masked_daily_mean_return": {
+      "status": "ok",
+      "spec_fingerprint": "e0fb6a6289d8b714f69779030aef5ad6adba5db70ae30938d7c57401ebc4f445",
+      "reference_shape": {
+        "I": 150,
+        "D": 120,
+        "M": 240
+      },
+      "seconds": 0.001644899952225387,
+      "peak_bytes": 39024640,
+      "device": "NVIDIA GeForce GTX 1070",
+      "source": "nonseed_operator_batch_benchmark",
+      "profiles_tested": 1,
+      "slowest_parameters": {}
+    },
+    "masked_daily_mean_signal": {
+      "status": "ok",
+      "spec_fingerprint": "0d402f32c40295dd9de92210b6b92527435a4be0e029e82d66315a21294a516d",
+      "reference_shape": {
+        "I": 150,
+        "D": 120,
+        "M": 240
+      },
+      "seconds": 0.001669399964157492,
+      "peak_bytes": 39024640,
+      "device": "NVIDIA GeForce GTX 1070",
+      "source": "nonseed_operator_batch_benchmark",
+      "profiles_tested": 1,
+      "slowest_parameters": {}
+    },
+    "minute_delta_volume": {
+      "status": "ok",
+      "spec_fingerprint": "f97ee4662a29ea8c5062b92fb499778695037f0e5be4def9d7204459e9186bc4",
+      "reference_shape": {
+        "I": 150,
+        "D": 120,
+        "M": 240
+      },
+      "seconds": 0.0020305999787524343,
+      "peak_bytes": 73207296,
+      "device": "NVIDIA GeForce GTX 1070",
+      "source": "nonseed_operator_batch_benchmark",
+      "profiles_tested": 2,
+      "slowest_parameters": {
+        "horizon": 1
+      }
+    },
+    "minute_path_correlation": {
+      "status": "ok",
+      "spec_fingerprint": "76ffd48fcdfc413ef605c3a9d0aeb3ec10d1799534c5c951631015db7b2c9799",
+      "reference_shape": {
+        "I": 150,
+        "D": 120,
+        "M": 240
+      },
+      "seconds": 0.0016542000230401754,
+      "peak_bytes": 52056576,
+      "device": "NVIDIA GeForce GTX 1070",
+      "source": "nonseed_operator_batch_benchmark",
+      "profiles_tested": 1,
+      "slowest_parameters": {}
+    },
+    "minute_return": {
+      "status": "ok",
+      "spec_fingerprint": "1b6a1aaba1c56d7a8beca6c7bb4d56f791e880094dad989bf350fc539a9b1209",
+      "reference_shape": {
+        "I": 150,
+        "D": 120,
+        "M": 240
+      },
+      "seconds": 0.00270400004228577,
+      "peak_bytes": 73207296,
+      "device": "NVIDIA GeForce GTX 1070",
+      "source": "nonseed_operator_batch_benchmark",
+      "profiles_tested": 2,
+      "slowest_parameters": {
+        "horizon": 1
+      }
+    },
+    "ols_conditional_abs": {
+      "status": "ok",
+      "spec_fingerprint": "7fdb1a1b5c7b0f787b95d6713971f46bfa2757310309ca4f90bd69277f749d9a",
+      "reference_shape": {
+        "I": 150,
+        "D": 120,
+        "M": 240
+      },
+      "seconds": 0.00026789994444698095,
+      "peak_bytes": 253952,
+      "device": "NVIDIA GeForce GTX 1070",
+      "source": "nonseed_operator_batch_benchmark",
+      "profiles_tested": 1,
+      "slowest_parameters": {}
+    },
+    "ols_intercept": {
+      "status": "ok",
+      "spec_fingerprint": "4afb16f2b0a5b50c850f75ddeed5b9e26bd0d39437a7fb37dc1079b0fcb99a5a",
+      "reference_shape": {
+        "I": 150,
+        "D": 120,
+        "M": 240
+      },
+      "seconds": 2.1299987565726042e-05,
+      "peak_bytes": 0,
+      "device": "NVIDIA GeForce GTX 1070",
+      "source": "nonseed_operator_batch_benchmark",
+      "profiles_tested": 1,
+      "slowest_parameters": {}
+    },
+    "ols_lag_dispersion": {
+      "status": "ok",
+      "spec_fingerprint": "d5130f04bd31988cfa6673e9bd805232b11b958f6b3142983afc28e4fe2e77d1",
+      "reference_shape": {
+        "I": 150,
+        "D": 120,
+        "M": 240
+      },
+      "seconds": 8.180004078894854e-05,
+      "peak_bytes": 72192,
+      "device": "NVIDIA GeForce GTX 1070",
+      "source": "nonseed_operator_batch_benchmark",
+      "profiles_tested": 1,
+      "slowest_parameters": {}
+    },
+    "open_amplitude": {
+      "status": "ok",
+      "spec_fingerprint": "f631c29aa660f52099f7563f4cf11d2334893c301cc368304ca5cedd38a8b8ae",
+      "reference_shape": {
+        "I": 150,
+        "D": 120,
+        "M": 240
+      },
+      "seconds": 0.0007650000043213367,
+      "peak_bytes": 51840000,
+      "device": "NVIDIA GeForce GTX 1070",
+      "source": "nonseed_operator_batch_benchmark",
+      "profiles_tested": 1,
+      "slowest_parameters": {}
+    },
+    "peer_return_spread": {
+      "status": "ok",
+      "spec_fingerprint": "dfb77ffdc82ffd18fc0d5e7ab63a66c01f4d6ae9ae2f301b8636101b2e37e71f",
+      "reference_shape": {
+        "I": 150,
+        "D": 120,
+        "M": 240
+      },
+      "seconds": 0.017427300044801086,
+      "peak_bytes": 335872,
+      "device": "NVIDIA GeForce GTX 1070",
+      "source": "nonseed_operator_batch_benchmark",
+      "profiles_tested": 4,
+      "slowest_parameters": {
+        "peer_count": 20
+      }
+    },
+    "point_signal": {
+      "status": "ok",
+      "spec_fingerprint": "124f839c9aa94b6aa4a91ddbb63c11b6d5dc1411b8f1e9b99dd23d0424411bde",
+      "reference_shape": {
+        "I": 150,
+        "D": 120,
+        "M": 240
+      },
+      "seconds": 1.209997572004795e-05,
+      "peak_bytes": 0,
+      "device": "NVIDIA GeForce GTX 1070",
+      "source": "nonseed_operator_batch_benchmark",
+      "profiles_tested": 1,
+      "slowest_parameters": {}
+    },
+    "prior_range_position": {
+      "status": "ok",
+      "spec_fingerprint": "ed4fb5d9553c7df926bf7f2c328af47901df527fd1475e5337c1c6c419fed41c",
+      "reference_shape": {
+        "I": 150,
+        "D": 120,
+        "M": 240
+      },
+      "seconds": 0.0038790000253356993,
+      "peak_bytes": 103680000,
+      "device": "NVIDIA GeForce GTX 1070",
+      "source": "nonseed_operator_batch_benchmark",
+      "profiles_tested": 3,
+      "slowest_parameters": {
+        "window": 10
+      }
+    },
+    "rank_daily_factor": {
+      "status": "ok",
+      "spec_fingerprint": "43f510c0e3d0018d3845f7e859f13c8cf0a79045a4af17d12e9c9adb9fd90562",
+      "reference_shape": {
+        "I": 150,
+        "D": 120,
+        "M": 240
+      },
+      "seconds": 0.0007854999857954681,
+      "peak_bytes": 1085952,
+      "device": "NVIDIA GeForce GTX 1070",
+      "source": "nonseed_operator_batch_benchmark",
+      "profiles_tested": 1,
+      "slowest_parameters": {}
+    },
+    "raw_abs_difference": {
+      "status": "ok",
+      "spec_fingerprint": "d9ed4e9b1b5ce68ef53a0eaa96b54f78bd52d13ac3c0fe086b72ffa3f60da7bb",
+      "reference_shape": {
+        "I": 150,
+        "D": 120,
+        "M": 240
+      },
+      "seconds": 6.550003308802843e-05,
+      "peak_bytes": 144384,
+      "device": "NVIDIA GeForce GTX 1070",
+      "source": "nonseed_operator_batch_benchmark",
+      "profiles_tested": 1,
+      "slowest_parameters": {}
+    },
+    "raw_multiply": {
+      "status": "ok",
+      "spec_fingerprint": "7ec8b51e2a4a3260383d9fb1df93455fddfc026886e90fb38dca758053e3476e",
+      "reference_shape": {
+        "I": 150,
+        "D": 120,
+        "M": 240
+      },
+      "seconds": 4.96999709866941e-05,
+      "peak_bytes": 72192,
+      "device": "NVIDIA GeForce GTX 1070",
+      "source": "nonseed_operator_batch_benchmark",
+      "profiles_tested": 1,
+      "slowest_parameters": {}
+    },
+    "raw_panic_weight": {
+      "status": "ok",
+      "spec_fingerprint": "43879828625ef98128f5f0a7a0f82f02fb452342a3d59e4e2b149a356433d463",
+      "reference_shape": {
+        "I": 150,
+        "D": 120,
+        "M": 240
+      },
+      "seconds": 0.00032439996721222997,
+      "peak_bytes": 289792,
+      "device": "NVIDIA GeForce GTX 1070",
+      "source": "nonseed_operator_batch_benchmark",
+      "profiles_tested": 1,
+      "slowest_parameters": {}
+    },
+    "relative_volume_entropy": {
+      "status": "ok",
+      "spec_fingerprint": "5731a91a9523784d5e347231171c73330bb3293d3cf36e827e9605190311f03c",
+      "reference_shape": {
+        "I": 150,
+        "D": 120,
+        "M": 240
+      },
+      "seconds": 0.0019456999725662172,
+      "peak_bytes": 42686976,
+      "device": "NVIDIA GeForce GTX 1070",
+      "source": "nonseed_operator_batch_benchmark",
+      "profiles_tested": 2,
+      "slowest_parameters": {
+        "bins": 48
+      }
+    },
+    "relative_volume_event": {
+      "status": "ok",
+      "spec_fingerprint": "a0fd692223eb84c51d86555fbbeb3ffba4782dd89d9c4026373242fc91ee8330",
+      "reference_shape": {
+        "I": 150,
+        "D": 120,
+        "M": 240
+      },
+      "seconds": 0.01233569998294115,
+      "peak_bytes": 294196224,
+      "device": "NVIDIA GeForce GTX 1070",
+      "source": "nonseed_operator_batch_benchmark",
+      "profiles_tested": 36,
+      "slowest_parameters": {
+        "lookback": 10,
+        "multiple": 1.0,
+        "exclude_edges": 5
+      }
+    },
+    "rolling_market_abs_corr": {
+      "status": "ok",
+      "spec_fingerprint": "549ce22db9e652882b80d8d0d2acc9d72489b1e42bf15a436f44a3422a2a130f",
+      "reference_shape": {
+        "I": 150,
+        "D": 120,
+        "M": 240
+      },
+      "seconds": 0.054434999998193234,
+      "peak_bytes": 367104,
+      "device": "NVIDIA GeForce GTX 1070",
+      "source": "nonseed_operator_batch_benchmark",
+      "profiles_tested": 4,
+      "slowest_parameters": {
+        "window": 5
+      }
+    },
+    "rushing_imbalance": {
+      "status": "ok",
+      "spec_fingerprint": "52ebbf0fb4fd6c20066a064caa6c8d51648c642dfc7bdbabbc8e8104d3134c4b",
+      "reference_shape": {
+        "I": 150,
+        "D": 120,
+        "M": 240
+      },
+      "seconds": 0.0006389999762177467,
+      "peak_bytes": 34560000,
+      "device": "NVIDIA GeForce GTX 1070",
+      "source": "nonseed_operator_batch_benchmark",
+      "profiles_tested": 1,
+      "slowest_parameters": {}
+    },
+    "select_regular_session": {
+      "status": "ok",
+      "spec_fingerprint": "00795d1ac6f82fffddd3e455402b6fca096c3676b6fdacecc9f2bb5c3bb94eef",
+      "reference_shape": {
+        "I": 150,
+        "D": 120,
+        "M": 240
+      },
+      "seconds": 2.1499989088624716e-05,
+      "peak_bytes": 0,
+      "device": "NVIDIA GeForce GTX 1070",
+      "source": "nonseed_operator_batch_benchmark",
+      "profiles_tested": 3,
+      "slowest_parameters": {
+        "session": "am"
+      }
+    },
+    "signed_raw": {
+      "status": "ok",
+      "spec_fingerprint": "09b7ff8cce83e5885483ef97d4bb8c8ab3b4f92fea7a1ce378c363593caad7b3",
+      "reference_shape": {
+        "I": 150,
+        "D": 120,
+        "M": 240
+      },
+      "seconds": 6.880000000819564e-05,
+      "peak_bytes": 72192,
+      "device": "NVIDIA GeForce GTX 1070",
+      "source": "nonseed_operator_batch_benchmark",
+      "profiles_tested": 2,
+      "slowest_parameters": {
+        "sign": -1
+      }
+    },
+    "sort_cumulative_difference_signal": {
+      "status": "ok",
+      "spec_fingerprint": "795af0e8b00546802325605aad8fa0680205e423f2ed7f047351f82add30acf5",
+      "reference_shape": {
+        "I": 150,
+        "D": 120,
+        "M": 240
+      },
+      "seconds": 0.01598830003058538,
+      "peak_bytes": 159840256,
+      "device": "NVIDIA GeForce GTX 1070",
+      "source": "nonseed_operator_batch_benchmark",
+      "profiles_tested": 1,
+      "slowest_parameters": {}
+    },
+    "sort_cumulative_difference_volume": {
+      "status": "ok",
+      "spec_fingerprint": "a4cfd3d198f0bb5c5262acab333b148626643d2c9744e1ac1cc0c2fbd489039f",
+      "reference_shape": {
+        "I": 150,
+        "D": 120,
+        "M": 240
+      },
+      "seconds": 0.016021299990825355,
+      "peak_bytes": 159840256,
+      "device": "NVIDIA GeForce GTX 1070",
+      "source": "nonseed_operator_batch_benchmark",
+      "profiles_tested": 1,
+      "slowest_parameters": {}
+    },
+    "spectral_window": {
+      "status": "ok",
+      "spec_fingerprint": "28af13c1348400d0bcfa05029579d3b2a69591293f91d701bc69afd37509d685",
+      "reference_shape": {
+        "I": 150,
+        "D": 120,
+        "M": 240
+      },
+      "seconds": 0.0002864000271074474,
+      "peak_bytes": 17281024,
+      "device": "NVIDIA GeForce GTX 1070",
+      "source": "nonseed_operator_batch_benchmark",
+      "profiles_tested": 3,
+      "slowest_parameters": {
+        "window": "hann"
+      }
+    },
+    "state_peer_volume": {
+      "status": "ok",
+      "spec_fingerprint": "ccd994583c9c8650960aeff17ba535e379658c132a08d5adaced2c7e17fe7717",
+      "reference_shape": {
+        "I": 150,
+        "D": 120,
+        "M": 240
+      },
+      "seconds": 0.002832300029695034,
+      "peak_bytes": 56275456,
+      "device": "NVIDIA GeForce GTX 1070",
+      "source": "nonseed_operator_batch_benchmark",
+      "profiles_tested": 1,
+      "slowest_parameters": {}
+    },
+    "topk_separated_events": {
+      "status": "ok",
+      "spec_fingerprint": "a54535a6c8e0d2206e2f4f7f978237d83105d7cc4774d04798f2e92bcf6c0aa2",
+      "reference_shape": {
+        "I": 150,
+        "D": 120,
+        "M": 240
+      },
+      "seconds": 0.010483000020030886,
+      "peak_bytes": 38882304,
+      "device": "NVIDIA GeForce GTX 1070",
+      "source": "nonseed_operator_batch_benchmark",
+      "profiles_tested": 27,
+      "slowest_parameters": {
+        "k": 15,
+        "exclude_before": 30,
+        "min_gap": 3
+      }
+    },
+    "volume_transform": {
+      "status": "ok",
+      "spec_fingerprint": "65a291d2e9b6539719ae9e81b76a3e0cd41af17f3000c7dbd7fd3fa189f8a447",
+      "reference_shape": {
+        "I": 150,
+        "D": 120,
+        "M": 240
+      },
+      "seconds": 0.00048019998939707875,
+      "peak_bytes": 34560000,
+      "device": "NVIDIA GeForce GTX 1070",
+      "source": "nonseed_operator_batch_benchmark",
+      "profiles_tested": 3,
+      "slowest_parameters": {
+        "mode": "log1p"
+      }
+    },
+    "window_return": {
+      "status": "ok",
+      "spec_fingerprint": "b58652a3baeca7f69b2588fec2c7c480fdf5e3282ee74673375fcd706408b2e2",
+      "reference_shape": {
+        "I": 150,
+        "D": 120,
+        "M": 240
+      },
+      "seconds": 0.001043400028720498,
+      "peak_bytes": 51408896,
+      "device": "NVIDIA GeForce GTX 1070",
+      "source": "nonseed_operator_batch_benchmark",
+      "profiles_tested": 3,
+      "slowest_parameters": {
+        "window": 10
+      }
+    }
+  }
+}

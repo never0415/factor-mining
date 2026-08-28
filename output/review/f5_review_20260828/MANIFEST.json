@@ -1,0 +1,145 @@
+{
+  "package": "f5_review_20260828",
+  "factor": "v7 因子 5 · ts_std 60 · 60 日波动率中性化",
+  "expression": "seed_ts_std_daily(masked_daily_mean_signal(forward_window_std(close_minute_log_return(close, horizon=5), ddof=1, window=5), topk_separated_events(volume, exclude_before=15, k=10, min_gap=5)), window=60)",
+  "generated": "2026-08-28",
+  "files": [
+    {
+      "path": "audit/f5_pipeline_audit_n60_20260828.json",
+      "bytes": 3976,
+      "sha256_16": "fcf12ba99fb66443"
+    },
+    {
+      "path": "code/compute_f5.py",
+      "bytes": 14594,
+      "sha256_16": "136015e261629c96"
+    },
+    {
+      "path": "code/verify_f5_export.py",
+      "bytes": 5733,
+      "sha256_16": "fc0a7290d5d7c917"
+    },
+    {
+      "path": "code/因子5_算子实现摘录.py",
+      "bytes": 24195,
+      "sha256_16": "335f56838bf1fc7b"
+    },
+    {
+      "path": "data/f5_ts60_vol60_20260828_raw.parquet",
+      "bytes": 6682862,
+      "sha256_16": "9dc4d83730efd6ce"
+    },
+    {
+      "path": "data/f5_ts60_vol60_20260828_raw.parquet.json",
+      "bytes": 1489,
+      "sha256_16": "8908ea864e2b6cfa"
+    },
+    {
+      "path": "data/f5_ts60_vol60_20260828_signal.parquet",
+      "bytes": 6453270,
+      "sha256_16": "d2ad5d2e1c001099"
+    },
+    {
+      "path": "data/f5_ts60_vol60_20260828_signal.parquet.json",
+      "bytes": 1544,
+      "sha256_16": "fbfaef76fedc1ca7"
+    },
+    {
+      "path": "definition/f5_ts60_adopted.jsonl",
+      "bytes": 6295,
+      "sha256_16": "19e3367dfafd5eb4"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4565,
+      "sha256_16": "916978c62f3f2089"
+    },
+    {
+      "path": "report/因子5_定稿报告.html",
+      "bytes": 162728,
+      "sha256_16": "fc7144e2fa04985e"
+    }
+  ],
+  "operator_sources": [
+    {
+      "function": "minute_return",
+      "source": "分钟级因子挖掘/operators/event.py",
+      "line": 24
+    },
+    {
+      "function": "close_minute_log_return",
+      "source": "分钟级因子挖掘/operators/intraday.py",
+      "line": 82
+    },
+    {
+      "function": "forward_window_std",
+      "source": "分钟级因子挖掘/operators/event.py",
+      "line": 75
+    },
+    {
+      "function": "topk_separated_events",
+      "source": "分钟级因子挖掘/operators/event.py",
+      "line": 105
+    },
+    {
+      "function": "masked_daily_mean",
+      "source": "分钟级因子挖掘/operators/event.py",
+      "line": 98
+    },
+    {
+      "function": "_float",
+      "source": "分钟级因子挖掘/operators/seed_tree.py",
+      "line": 38
+    },
+    {
+      "function": "_history_rows",
+      "source": "分钟级因子挖掘/operators/seed_tree.py",
+      "line": 108
+    },
+    {
+      "function": "_rolling",
+      "source": "分钟级因子挖掘/operators/seed_tree.py",
+      "line": 113
+    },
+    {
+      "function": "_ts_std",
+      "source": "分钟级因子挖掘/operators/seed_tree.py",
+      "line": 142
+    },
+    {
+      "function": "remove_outliers",
+      "source": "分钟级因子挖掘/numeric/preprocessing.py",
+      "line": 8
+    },
+    {
+      "function": "neutralize",
+      "source": "分钟级因子挖掘/numeric/preprocessing.py",
+      "line": 66
+    },
+    {
+      "function": "cross_section_rank",
+      "source": "分钟级因子挖掘/numeric/ranking.py",
+      "line": 25
+    },
+    {
+      "function": "trailing_volatility",
+      "source": "分钟级因子挖掘/evaluation/neutralize.py",
+      "line": 8
+    },
+    {
+      "function": "trailing_signal_mean",
+      "source": "分钟级因子挖掘/evaluation/incremental.py",
+      "line": 287
+    },
+    {
+      "function": "week_end_mask",
+      "source": "分钟级因子挖掘/label.py",
+      "line": 66
+    },
+    {
+      "function": "tensor_weekly_fwd_ret",
+      "source": "分钟级因子挖掘/label.py",
+      "line": 80
+    }
+  ]
+}
